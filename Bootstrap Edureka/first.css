@@ -1,0 +1,52 @@
+.btn-purple{
+    background-color: purple !important;
+}
+
+
+.submit{
+    background-color: white;
+    height: 35px;
+    width: 10%;
+    color: green;
+    transform: ease-in-out;
+    border-color: green;
+}
+
+.submit:hover{
+    background-color: green;
+    color: white;
+    border-color: white;
+}
+
+.print{
+    font-size: 20px;
+}
+
+
+.trash{
+    font-size: 20px;
+    color: red;
+    margin-left: 20px;
+}
+
+.edit{
+    font-size: 20px;
+    color:green;
+    margin-left: 20px;
+}
+
+.credit-card{
+    font-size: 20px;
+    color:blue;
+    margin-left: 20px;
+}
+
+.slideDiv{
+    height: 350px;
+    width:100%;
+}
+
+.slideDiv img{
+    height: 100%;
+    width:100%;
+}

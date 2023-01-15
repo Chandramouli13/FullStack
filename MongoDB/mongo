@@ -1,0 +1,180 @@
+
+MongoDB - noSQL
+
+There are two data 
+- structure data  
+- un structure data
+
+sql
+- un structure data
+- wasting the memory like columns gaps are not filled. (space is wasted)
+
+RollNo | Hindi | English |
+  1    |  80   |         |
+  2    |       |   70    |
+  3    |  89   |         |
+
+
+Mongo
+- structure data
+- data is saved in the form of JSON format (better format)
+- no space wasted.
+
+[
+    {
+        rollNo:1,
+        Hindi:80
+    },
+    {
+        rollNo:2,
+        English:70
+    },
+    {
+        rollNo:3,
+        Hindi:89,
+        computer:98
+    }
+]
+
+
+
+>> Sql     vs   Mongo(noSql)
+Database        Database
+Table           Collection
+Row             Document
+Select          find
+Insert          Insert
+Update          update
+Delete          remove/delete
+
+///////
+https://www.mongodb.com/try/download/community
+
+////
+In C drive make folder by name of data
+and inside data make folder by name of db
+
+C:/data/db
+
+////////////////
+// windows
+To Start mongo server
+> open cmd and go inside bin folder
+(C:\Program Files\MongoDB\Server\5.0\bin) 
+> mongod 
+(start mongo server on port 27017)
+(do not close this cmd)
+
+
+To Start mongo client
+> open cmd and go inside bin folder
+(C:\Program Files\MongoDB\Server\5.0\bin>)  
+> mongo
+(only require to test query)
+
+
+// mac/linux
+<!-- > open terminal
+> sudo mkdir data/db
+> close cmd
+
+To Start mongo server
+> open terminal
+> mongod --dbpath data/db
+(start mongo server on port 27017)
+(do not close this terminal)
+
+
+To Start mongo client
+> open terminal
+> mongo
+(only require to test query) -->
+
+
+/////////////////
+# See Exisiting Db
+> show dbs
+
+# Go Inside DB
+> use databasename
+
+# Go see collection of db
+> show collections
+
+# To See all the data in db
+> db.collectionName.find()
+
+> db.location.find()
+> db.location.find().pretty()
+
+/////////////
+# Create database
+> use yourdatabase name
+
+# Insert data in collection
+db.collection.insert({})
+
+db.test.insert({name:'Amit',city:'Amsterdam'})
+db.test.insert({_id:1,name:'Latika',city:'Paris',subject:'UI'})
+db.test.insert({name:'Karan',city:'Pune'})
+
+
+/////
+find with condition
+> db.restaurants.find({state_id:1})         // All the state_id:1 restaurants data.
+
+> db.restaurants.find({state_id:1,rating_text: "Very Good"})
+
+// normal data format
+> db.test.find()
+{ "_id" : ObjectId("63a958a95fe6342645291ec9"), "name" : "Amit", "city" : "Amsterdam" }
+
+// beautiful and understandable data format
+>db.test.find().pretty()               // add pretty() for beautiful data format.
+{
+        "_id" : ObjectId("63a958a95fe6342645291ec9"),     
+        "name" : "Amit",
+        "city" : "Amsterdam"
+}
+
+> In mongodb (_id) is default primary key. the _id always be unique.
+> for every data default primary key (_id) is added.
+> we can give our own primary key our own _id and it should not be same.
+
+
+/// delete database
+Example we created a database
+> use test
+want to delete this database
+> db.dropDatabase()
+
+/////////////////////////////////////////////////////////////////////
+> cmd
+
+> C:\Program Files\MongoDB\Server\5.0\bin> mongod     // server
+
+> This mongo server is running on port: 27017
+
+Note: Do not close the server terminal.
+
+/////////////////////////////////////////////////////////////////////
+live example to do:
+steps:
+> cmd
+
+>  > mongo      // client
+
+> show dbs                      // database list
+
+> use sepIntern                 // create database
+
+> db.test.insert({name:'Amit',city:'Amsterdam'})     // insert data
+
+> show dbs                      // check created database
+
+> use test                      // open created db
+
+> show collections              // shows inserted data
+
+> db.test.find().pretty()       // see the inserted data 
+
