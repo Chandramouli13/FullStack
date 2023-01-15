@@ -43,7 +43,6 @@ let mongo = require('mongodb');
 let MongoClient = mongo.MongoClient;
 let bodyParser = require('body-parser');
 let mongoUrl = "mongodb://localhost:27017";
-// let mongoUrl = "mongodb+srv://test:test123@cluster0.4qwg65i.mongodb.net/?retryWrites=true&w=majority";
 let db;
 
 // middleware - supporting library
