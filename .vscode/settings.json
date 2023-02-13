@@ -1,0 +1,7 @@
+{
+    "gitlens.codeLens.enabled": true,
+    "git.enabled": false,
+    "cSpell.words": [
+        "glyphicon"
+    ]
+}
