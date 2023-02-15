@@ -1,4 +1,4 @@
-lerning>  sat and sun
+learning>  sat and sun
 doubt 
 monday 8pm
 wed:7pm
@@ -332,7 +332,16 @@ child > parent (props with callback function)
        
 (get) restaurants>         http://3.17.216.66:4000/restaurants
 
+///////////////////////////////////////// start zomapp ////////////////////////////////////////////
+/// step 1: opens React App on localhost:3000  ///
+1. D:\EDUREKA\Full Stack\React Edureka\zomapp> npm start  
 
+/// step 2: While Place Order we need to run payment gateway on port 4100. open paytm folder and go to terminal and run this: ///
+2. D:\EDUREKA\Full Stack\NodeJS Edureka\Paytm> npm start
+
+/// step 3: Placed orders will be displayed on this dummy port 1122 ///
+3. D:\EDUREKA\Full Stack\React Edureka\zomapp>json-server --watch order.json --port 1122
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 dummy api
 > open cmd as admin
@@ -340,24 +349,6 @@ dummy api
 > json-server --watch order.json --port 1122
 
 // Exactly like this Follow this :
-open cmd as admin
-
-C:\Windows\System32>cd..
-
-C:\Windows>d:
-
-D:\>EDUREKA
-'EDUREKA' is not recognized as an internal or external command,
-operable program or batch file.
-
-D:\>cd EDUREKA
-
-D:\EDUREKA> cd Full Stack
-
-D:\EDUREKA\Full Stack>cd React Edureka
-
-D:\EDUREKA\Full Stack\React Edureka> cd zomapp
-
 D:\EDUREKA\Full Stack\React Edureka\zomapp>npm i -g json-server
 
 D:\EDUREKA\Full Stack\React Edureka\zomapp>json-server --watch order.json --port 1122
@@ -374,12 +365,13 @@ D:\EDUREKA\Full Stack\React Edureka\zomapp>json-server --watch order.json --port
 /*UserInfo/ (GET) => http://3.17.216.66:5000/api/auth/userinfo (Header) => {'x-access-token':'token value from login'}
 
 
-// step to make react app live
+//////// step to make react app live ///////////////////////
 > npm run build
+// it will make the build of this application then after that :
+> go to netlify.com and just sign up with github
 
 
-
-// How to make api live ?
+///////////// How to make api live ?//////////////////
 
 1. upload the code of rest api in separate repository.
 2. Go to render.com
